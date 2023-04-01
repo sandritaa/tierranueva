@@ -19,6 +19,10 @@ class Admin(db.Model):
     country = db.Column(db.String)
     password = db.Column(db.String(12))
 
+ # class representation
+    def __repr__(self):
+        return f'<Admin admin_id={self.admin_id} fname={self.fname} lname={self.lname} email={self.email} phone={self.phone} city={self.city}> country={self.country}>'
+
 
 class Volunteer(db.Model):
     # create volunteers table
@@ -33,28 +37,15 @@ class Volunteer(db.Model):
     country = db.Column(db.String)
     password = db.Column(db.String(12))
 
+ # class representation
+
+    def __repr__(self):
+        return f'<Volunteer volunteer_id={self.volunteer_id} fname={self.fname} lname={self.lname} email={self.email} phone={self.phone} city={self.city}> country={self.country}>'
+
 
 class Event(db.Model):
     # create events table
     __tablename__ = 'events'
-    # create attributes
-    event_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    title = db.Column(db.String)
-    date = db.Column(db.DateTime)
-    description = db.Column(db.String)
-    picture_path = db.Column(db.String)
-    password = db.Column(db.String(12))
-
-    # add foreign keys
-    admin_id = db.Column(db.Integer, db.ForeignKey('admins.admin_id'))
-
-    # add relationship
-    admin = db.relationship('Admin', back_populates='event')
-
-
-class Post(db.Model):
-    # create posts table
-    __tablename__ = 'posts'
     # create attributes
     event_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     title = db.Column(db.String)
@@ -66,4 +57,30 @@ class Post(db.Model):
         db.Integer, db.ForeignKey('volunteers.volunteer_id'))
 
     # add relationship
-    volunteer = db.relationship('Volunteer', back_populates='post')
+    volunteer = db.relationship('Volunteer', back_populates='event')
+
+ # class representation
+
+    def __repr__(self):
+        return f'<Event event_id={self.event_id} title={self.title} date={self.date} description={self.description} >'
+
+
+class Post(db.Model):
+    # create posts table
+    __tablename__ = 'posts'
+    # create attributes
+    post_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    title = db.Column(db.String)
+    date = db.Column(db.DateTime)
+    description = db.Column(db.String)
+    picture_path = db.Column(db.String)
+
+    # add foreign keys
+    admin_id = db.Column(db.Integer, db.ForeignKey('admins.admin_id'))
+
+    # add relationship
+    admin = db.relationship('Admin', back_populates='post')
+# class representation
+
+    def __repr__(self):
+        return f'<Post post_id={self.post_id} title={self.title} date={self.date} description={self.description}>'
