@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Tierra Nueva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300&family=Roboto:wght@100;300;400&family=Work+Sans:wght@100;300;400&display=swap"
+        rel="stylesheet">
+    <!-- style  -->
+    <link href="/static/styles/index.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 navbar-fixed-left">
+        <div class="container d-flex flex-column">
+            <div class="text-end">
+                <a href="/" class="navbar-brand">
+                    <div>Tierra Nueva<</div> </a> <ul class="navbar-nav ms-auto flex-column">
+                            <li class="nav-item">
+                                <a href="/" class="nav-link">home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ login_button['route'] }}" class="nav-link">{{ login_button['label'] }}</a>
+                            </li>
+
+                            </ul>
+                    </div>
+            </div>
+    </nav>
+
+    <!-- PAGE CONTENT -->
+    <div class="bodyContent">
+        {% block body %}
+        {% endblock %}
+    </div>
+
+    <script>
+        let currentPage = window.location.pathname;
+        let links = document.querySelectorAll('.nav-link');
+
+        links.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
