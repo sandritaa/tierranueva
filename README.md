@@ -1,6 +1,6 @@
 # Tierra Nueva
 
-Tierra Nueva is a web application
+Tierra Nueva is a web application for the non profit organization Corporacion Tierra Nueva. It will allow the admin user to create, update and delete blog posts and events. They will also have the ability to register new volunteers.
 
 ## About the developer
 
