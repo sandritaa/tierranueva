@@ -3,6 +3,8 @@ from flask import Flask, render_template, request, flash, session, redirect, fla
 from model import connect_to_db, db
 from jinja2 import StrictUndefined
 from datetime import datetime
+import crud
+import helper
 
 # create the flask app
 app = Flask(__name__)
@@ -74,7 +76,7 @@ def login():
         session.modified = True
 
         # get the admin route since it is a dynamic route depending on the logged in admin
-       admin_route = helper.get_admin_route(admin)
+    admin_route = helper.get_admin_route(admin)
 
 
         # go to the admin route
