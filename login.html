@@ -1,0 +1,46 @@
+<!-- inherit from base.html -->
+{% extends 'base.html' %}
+
+<!-- insert content block -->
+{% block body %}
+
+
+<div class="bg-light text-dark py-sm-5 topbar">
+    <h1 class="mainHeading">Login</h1>
+</div>
+
+<div class="container pt-5">
+    <div class="row justify-content-center">
+        <div class="col-5">
+            <div class="mt-4">
+                <div class="card pb-4">
+                    <div class="card-body">
+                        <!-- send post request to server to create new item and update database when added -->
+                        <form action='/login' class="row g-3">
+                            <div class="md-6">
+                                <label for="email" class="form-label">Email: </label>
+                                <input type="email" class="form-control" id="emaillog" name="email" required
+                                    minlength='1' maxlength='50'>
+                            </div>
+                            <div class="md-6">
+                                <label for="password" class="form-label">Password: </label>
+                                <input type="password" class="form-control" id="passwordlog" name="password" required
+                                    minlength='1'>
+                            </div>
+                            <div class="col-12">
+                                <input type='submit' class="customButton btn btn-light">
+                                <!-- add create account button-->
+                                <button type='button' class="customButton btn btn-light">
+                                    <a href='/profile'>Create Account</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

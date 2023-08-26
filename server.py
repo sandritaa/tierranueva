@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template, request, flash, session, redirect, flash
+from flask import Flask, render_template, request, flash, session, redirect
 from model import connect_to_db, db
 from jinja2 import StrictUndefined
 from datetime import datetime
@@ -79,11 +79,11 @@ def login():
     admin_route = helper.get_admin_route(admin)
 
 
-        # go to the admin route
-    return redirect(admin_route)
+    #     # go to the admin route
+    # return redirect(admin_route)
 
-    # if no admin was found then do not login and re route to the login route
-    else:
+    # # if no admin was found then do not login and re route to the login route
+    # else:
     
     return redirect('/login')
 
@@ -106,12 +106,12 @@ def admin_profile(alias):
     else:
         return redirect('/login')
 
-# create register volunterr route
-@app.route('/profile')
-def new_volunteer_profile_form():
+# # create register volunterr route
+# @app.route('/profile')
+# def new_volunteer_profile_form():
 
-    # simply render the create account page
-    return render_template('createAccount.html')
+#     # simply render the create account page
+#     return render_template('createAccount.html')
 
 if __name__ == "__main__":
     connect_to_db(app)

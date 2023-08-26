@@ -30,11 +30,11 @@ for admin in admins:
 db.session.commit()
 
 # Seed volunteers in database
-volunteers = mockdata['volunteers']
-for volunteer in volunteers:
-    db.session.add(crud.create_volunteer_profile(
-        fname=volunteer['fname'], lname=volunteer['lname'], email=volunteer['email'], phone=volunteer['phone'], password=volunteer['password'] , city = admin['city'], country=admin['country']))
-db.session.commit()
+# volunteers = mockdata['volunteers']
+# for volunteer in volunteers:
+#     db.session.add(crud.create_volunteer_profile(
+#         fname=volunteer['fname'], lname=volunteer['lname'], email=volunteer['email'], phone=volunteer['phone'], password=volunteer['password'] , city = admin['city'], country=admin['country']))
+# db.session.commit()
 
 # Seed events in database
 events = mockdata['events']
@@ -43,7 +43,7 @@ for event in events:
 db.session.commit()
 
 # Seed posts in database
-posts = mockdata['posts']
-for post in posts:
-    db.session.add(crud.create_post(title = post['title'], description=post['description'], date=datetime.strptime(post['date'], "%Y-%m-%d"), ))
-db.session.commit()
+# posts = mockdata['posts']
+# for post in posts:
+#     db.session.add(crud.create_post(title = post['title'], description=post['description'], date=datetime.strptime(post['date'], "%Y-%m-%d"), ))
+# db.session.commit()
