@@ -13,13 +13,14 @@ os.system('createdb tierranuevadb')
 
 # Connect to the db and create tables
 if __name__ == "__main__":
-    from server import app
-    connect_to_db(app)
-    db.create_all()
+        from server import app
+        with app.app_context():
+            connect_to_db(app)
+            db.create_all()
 
 # Open the json with mockdata and parse it
 # Second argument "r" -> read permission - can only read file
-with open("static/data/mockdata.json", "r") as json_file:
+with open("mockdata.json", "r") as json_file:
     mockdata = json.load(json_file)
 
 # Seed admins in database
@@ -37,10 +38,10 @@ db.session.commit()
 # db.session.commit()
 
 # Seed events in database
-events = mockdata['events']
-for event in events:
-    db.session.add(crud.create_event(title = event['title'], description=event['description'], date=datetime.strptime(event['date'], "%Y-%m-%d"), ))
-db.session.commit()
+# events = mockdata['events']
+# for event in events:
+#     db.session.add(crud.create_event(title = event['title'], description=event['description'], date=datetime.strptime(event['date'], "%Y-%m-%d"), ))
+# db.session.commit()
 
 # Seed posts in database
 # posts = mockdata['posts']

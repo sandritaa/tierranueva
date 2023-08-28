@@ -20,6 +20,8 @@ class Admin(db.Model):
     password = db.Column(db.String(12))
     alias = db.Column(db.String)
 
+
+
  # class representation
     def __repr__(self):
         return f'<Admin admin_id={self.admin_id} fname={self.fname} lname={self.lname} email={self.email} phone={self.phone} city={self.city}> country={self.country} alias={self.alias}>'
@@ -44,14 +46,14 @@ class Admin(db.Model):
 #         return f'<Volunteer volunteer_id={self.volunteer_id} fname={self.fname} lname={self.lname} email={self.email} phone={self.phone} city={self.city}> country={self.country} alias={self.alias}>'
 
 
-class Event(db.Model):
-    # create events table
-    __tablename__ = 'events'
-    # create attributes
-    event_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    title = db.Column(db.String)
-    date = db.Column(db.DateTime)
-    description = db.Column(db.String)
+# class Event(db.Model):
+#     # create events table
+#     __tablename__ = 'events'
+#     # create attributes
+#     event_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+#     title = db.Column(db.String)
+#     date = db.Column(db.DateTime)
+#     description = db.Column(db.String)
 
 #  # add foreign keys
 #     volunteer_id = db.Column(
@@ -62,8 +64,8 @@ class Event(db.Model):
 
  # class representation
 
-    def __repr__(self):
-        return f'<Event event_id={self.event_id} title={self.title} date={self.date} description={self.description} >'
+    # def __repr__(self):
+    #     return f'<Event event_id={self.event_id} title={self.title} date={self.date} description={self.description} >'
 
 
 # class Post(db.Model):
