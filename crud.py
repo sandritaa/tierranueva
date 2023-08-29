@@ -22,6 +22,11 @@ def get_admin_by_alias(alias):
     return Admin.query.filter(Admin.alias == alias).first()
 
 
+# create admin profile to seed database
+def create_admin_profile(fname, lname, email, phone, password, country, city, alias):
+    return Admin(fname=fname, lname=lname, email=email, password=password, country=country,
+                  alias=alias, city=city, phone=phone)
+
 if __name__ == "__main__":
     from server import app
 
