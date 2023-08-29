@@ -26,7 +26,7 @@ with open("mockdata.json", "r") as json_file:
 # Seed admins in database
 admins = mockdata['admins']
 for admin in admins:
-    db.session.add(crud.create_admin_profile(fname=admin['fname'], lname=admin['lname'], email=admin['email'], phone = admin['phone'], city = admin['city'], password=admin['password'],
+    db.session.add(crud.create_admin_profile(fname=admin['fname'], lname=admin['lname'], email=admin['email'], phone = admin['phone'], city = admin['city'], password=admin['password'],alias=admin['alias'],
                    country=admin['country']))
 db.session.commit()
 
