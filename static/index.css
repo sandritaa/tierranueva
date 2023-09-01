@@ -173,3 +173,26 @@
     transform: rotateY(180deg);
     /* Rotate the image on hover */
 }
+
+/* Style for the image to fill the entire card */
+/* .programCards .card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease; */
+/* Add a smooth transition effect */
+/* } */
+
+/* Hide the second image by default */
+.programCards .card .image2 {
+    display: none;
+}
+
+/* On hover, swap visibility of the images */
+.programCards .card:hover .image1 {
+    display: none;
+}
+
+.programCards .card:hover .image2 {
+    display: block;
+}
