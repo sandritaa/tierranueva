@@ -1,7 +1,3 @@
-/* .carousel {
-    background-color: black;
-} */
-
 h1 {
     color: aqua;
 }
@@ -9,6 +5,76 @@ h1 {
 button {
     color: coral;
 }
+
+
+.carousel-indicators {
+    color: black;
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: black;
+    /* Change this to your desired background color */
+    color: black;
+    /* Change this to your desired text color */
+    border: none;
+    /* Remove border */
+    max-width: 5%;
+    /* Adjust this value as needed */
+    padding: 5px;
+
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+}
+
+
+
+.carousel {
+    max-height: 100px;
+    background-color: aqua;
+    /* Adjust this value as needed */
+}
+
+/* .card img { */
+/* width: 50%; */
+/* Ensure the image width spans the entire card block */
+/* height: 50%; */
+/* Ensure the image height spans the entire card block */
+/* object-fit: cover; */
+/* Maintain aspect ratio and cover the container */
+/* } */
+
+/* Center images within the card */
+.card img {
+    /* width: 100%; */
+    width: 50%;
+    /* Ensure the image width spans the entire card block */
+    /* height: auto; */
+    height: 40%;
+    /* Allow the image height to adjust proportionally */
+    display: block;
+    /* Remove any extra spacing around the image */
+    margin: 0 auto;
+    /* Center horizontally within the card block */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the container */
+}
+
+/* Center the card body content vertically within the card */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* Make sure the card body fills the entire card */
+}
+
 
 /* .carousel-inner.carousel-item {
     background-color: black;
@@ -22,12 +88,6 @@ button {
     height: 500px;
 
 } */
-
-
-.carousel-indicators {
-    color: black;
-}
-
 
 
 /* .carousel-indicators
@@ -46,55 +106,64 @@ button {
         .visually-hidden
   */
 
-.carousel-inner {
-    height: 100vh;
-    /* Set the carousel height to full viewport height */
-}
+/*   */
+/* Set the carousel height to full viewport height */
+/* } */
 
-.carousel-inner .carousel-item {
+/* .carousel-inner .carousel-item {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
-.carousel-inner img {
-    max-height: 80vh;
-    /* Set maximum image height */
-    max-width: 100%;
-    /* Ensure image doesn't exceed container width */
-    object-fit: contain;
-    /* Maintain aspect ratio */
-}
+/* .carousel-inner img { */
+/* max-height: 80vh; */
+/* Set maximum image height */
+/* max-width: 100%; */
+/* Ensure image doesn't exceed container width */
+/* object-fit: contain; */
+/* Maintain aspect ratio */
+/* } */
 
-.carousel-control-prev,
-.carousel-control-next {
-    background-color: black;
-    /* Change this to your desired background color */
-    color: black;
-    /* Change this to your desired text color */
-    border: none;
-    /* Remove border */
-    max-width: 50px;
-    /* Adjust this value as needed */
-    padding: 5px;
-
-    height: 80px;
-
-    display: flex;
-    justify-content: center;
-    /* Center horizontally */
-    align-items: center;
-}
-
-.carousel {
-    max-height: 400px;
-    background-color: aqua;
-    /* Adjust this value as needed */
-}
 
 /* Customize the height of the carousel items */
-.carousel-inner .carousel-item {
-    height: 300px;
+/* .carousel-inner .carousel-item {
+    height: 300px; */
 
-    /* Adjust this value as needed */
-}
+/* Adjust this value as needed */
+/* } */
+
+/* Set a fixed height for the carousel items */
+/* .carousel-item {
+    height: 300px; */
+/* Adjust this value to your preferred height */
+/* } */
+
+/* Set a fixed height for the card block */
+/* .card {
+    height: 100%; */
+/* Ensure the card block fills the carousel item */
+/* } */
+
+/* Set a fixed height for the images and ensure they cover the card block */
+
+
+/* Set a fixed height for the carousel items */
+/* .carousel-item {
+    height: 300px; */
+/* Adjust this value to your preferred height */
+/* } */
+
+/* Center the card block vertically within the carousel item */
+/* .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+} */
+
+/* Set a max width and max height for the images */
+/* .card img {
+    max-width: 100%;
+    max-height: 100%;
+} */
