@@ -1,20 +1,11 @@
-h1 {
-    color: aqua;
-}
-
-button {
-    color: coral;
-}
+/* CAROUSEL */
 
 
-.carousel-indicators {
-    color: black;
-}
 
 
 .carousel-control-prev,
 .carousel-control-next {
-    background-color: black;
+    background-color: rgb(223, 223, 223);
     /* Change this to your desired background color */
     color: black;
     /* Change this to your desired text color */
@@ -23,31 +14,13 @@ button {
     max-width: 5%;
     /* Adjust this value as needed */
     padding: 5px;
-
     height: 100%;
-
     display: flex;
     justify-content: center;
     /* Center horizontally */
     align-items: center;
 }
 
-
-
-.carousel {
-    max-height: 100px;
-    background-color: aqua;
-    /* Adjust this value as needed */
-}
-
-/* .card img { */
-/* width: 50%; */
-/* Ensure the image width spans the entire card block */
-/* height: 50%; */
-/* Ensure the image height spans the entire card block */
-/* object-fit: cover; */
-/* Maintain aspect ratio and cover the container */
-/* } */
 
 /* Center images within the card */
 .card img {
@@ -63,6 +36,8 @@ button {
     /* Center horizontally within the card block */
     object-fit: cover;
     /* Maintain aspect ratio and cover the container */
+    opacity: 0.6;
+
 }
 
 /* Center the card body content vertically within the card */
@@ -74,6 +49,105 @@ button {
     height: 100%;
     /* Make sure the card body fills the entire card */
 }
+
+/* Center the card title within the card */
+.card-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    text-align: center;
+    /* Center the text horizontally */
+    margin: 0;
+    /* Remove any default margin */
+
+}
+
+.tnCard {
+    padding-top: 40px;
+}
+
+/* Style for "Tierra Nueva" card */
+/* Style for "Tierra Nueva" card */
+.tnCard {
+    max-width: 100%;
+    /* Adjust the maximum width as needed */
+    margin: 0 auto;
+    /* Center the card horizontally */
+    border: 1px solid #ccc;
+    /* Add border or any desired styling */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* Add box shadow or any desired styling */
+    position: relative;
+    /* Enable positioning */
+    text-align: center;
+    /* Center the content within the card */
+}
+
+.tnCard-text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* Center the text both horizontally and vertically */
+    margin: 0;
+    /* Remove any default margin */
+    padding: 20px;
+    /* Add padding as needed */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Add background color with transparency */
+    z-index: 1;
+    /* Ensure the text container is above the image */
+}
+
+.tnCard-title {
+    color: #333;
+    /* Customize title color */
+}
+
+.tnCard-text {
+    color: #666;
+    /* Customize text color */
+}
+
+.tnCard-link {
+    text-decoration: none;
+    color: #007bff;
+    /* Customize link color */
+}
+
+/* Style for the image */
+.tnCard img {
+    max-width: 100%;
+    /* Ensure the image doesn't overflow the card */
+    height: auto;
+    /* Allow the image height to adjust proportionally */
+    display: block;
+    /* Remove extra spacing around the image */
+    margin: 0 auto;
+    /* Center the image horizontally */
+    opacity: 0.6;
+}
+
+
+
+
+/* .carousel {
+    padding-bottom: 50px;
+} */
+
+
+
+/* .card img { */
+/* width: 50%; */
+/* Ensure the image width spans the entire card block */
+/* height: 50%; */
+/* Ensure the image height spans the entire card block */
+/* object-fit: cover; */
+/* Maintain aspect ratio and cover the container */
+/* } */
+
 
 
 /* .carousel-inner.carousel-item {
