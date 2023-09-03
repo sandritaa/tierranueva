@@ -184,7 +184,8 @@
 /* } */
 
 /* Hide the second image by default */
-.programCards .card .image2 {
+.programCards .card .image2,
+.programCards .card .himg2 {
     display: none;
 }
 
@@ -195,4 +196,16 @@
 
 .programCards .card:hover .image2 {
     display: block;
+}
+
+.programCards .card:hover .image2,
+.programCards .card:hover .himg2 {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
