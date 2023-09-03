@@ -132,80 +132,33 @@
 }
 
 /* PROGRAM CARDS */
-.programCards .card {
-    /* width: 60rem; */
+.programCards .proCard {
     width: 100%;
-    /* Set the width to your desired value */
     height: 60rem;
-    /* Set the height to your desired value */
-    /* margin-right: 20px; */
-    /* Add some spacing between the cards */
-    /* box-sizing: border-box; */
-    /* Include padding and border in the width calculation */
-    padding: 0;
-    margin: 0;
+    position: relative;
+    /* Add position relative for absolute positioning */
+    overflow: hidden;
+    /* Hide overflow to prevent image overlap */
 }
 
-.programCards .card-body {
-    text-align: center;
-    /* Center align the card content */
-}
-
-/* Style for the image to fill the entire card */
-.programCards .card img {
-    /* max-width: 100%; */
+.programCards .proCard img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-/* Style for the image to fill the entire card */
-/* .programCards .card {
-    position: relative;
-    perspective: 1000px; */
-/* Add perspective for 3D effect */
-/* } */
-
-
-
-.programCards .card:hover img {
-    transform: rotateY(180deg);
-    /* Rotate the image on hover */
-}
-
-/* Style for the image to fill the entire card */
-/* .programCards .card img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease; */
-/* Add a smooth transition effect */
-/* } */
-
-/* Hide the second image by default */
-.programCards .card .image2,
-.programCards .card .himg2 {
-    display: none;
-}
-
-/* On hover, swap visibility of the images */
-.programCards .card:hover .image1 {
-    display: none;
-}
-
-.programCards .card:hover .image2 {
-    display: block;
-}
-
-.programCards .card:hover .image2,
-.programCards .card:hover .himg2 {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    padding: 0;
+.programCards .proCard .image2 {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.programCards .proCard:hover .image2 {
+    opacity: 1;
 }
