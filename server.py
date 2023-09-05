@@ -105,6 +105,21 @@ def admin_profile(alias):
     # if no admin is logged in the redirect to the login page
     else:
         return redirect('/login')
+    
+
+# create home route for GET request
+@app.route('/about')
+def about():
+
+    # # get login or logout depending if an admin is logged in or not
+    login_button = helper.switch_profile_login(session)
+
+    # query all admin to display on homepage
+    admin = crud.get_all_admins()
+
+    # render an html and pass admins and login_button as data
+    return render_template("about.html", admin=admin, login_button=login_button)
+
 
 # # create register volunterr route
 # @app.route('/profile')
