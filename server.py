@@ -59,7 +59,7 @@ def login():
     user_password = request.args.get('password')
 
     # query from the database if the email and password exist under the same account
-    admin = crud.get_admin_by_login(user_email, user_password)
+    admin = crud.get_admins_by_login(user_email, user_password)
 
     # if no user or email were entered then re-render the login page
     # could also add this as a requirement in the form (e.g. min length on inputs)
