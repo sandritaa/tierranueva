@@ -1,0 +1,57 @@
+<!-- inherit from base.html -->
+{% extends 'base.html' %}
+
+<!-- insert content block -->
+{% block body %}
+
+<div class="bg-light text-dark py-sm-5 topbar">
+    <h1 class="mainHeading">contact us</h1>
+</div>
+
+<div class="container pt-5">
+    <div class="row justify-content-center">
+        <div class="col-7">
+            <div class="mt-4">
+                <div class="card pb-4">
+                    <div class="card-body">
+                        <!-- send post request to server to create new item and update database when added -->
+                        <form action='/billing' class="row g-3">
+                            <div class="col-md-6">
+                                <label for="inputFname" class="form-label">First name *</label>
+                                <input type="text" class="form-control" id="inputFname" name="fname" required
+                                    minlength='1' maxlength='50'>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputLname" class="form-label">Last name *</label>
+                                <input type="text" class="form-control" id="inputLname" name="lname" required
+                                    minlength='1' maxlength='50'>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputPhone" class="form-label">Phone *</label>
+                                <input type="text" class="form-control" id="inputPhone" placeholder="123-456-7890"
+                                    name="phone" required minlength='1' maxlength='50'>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputEmail" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="inputEmail" name="email" required
+                                    minlength='1' maxlength='50'>
+                            </div>
+
+
+                            <div class="col-12">
+                                <button type="button" class="customButton btn btn-light"><a
+                                        href="/cart">back</a></button>
+                                <input type="submit" href='/signup' class="customButton btn btn-light"
+                                    value="proceed to sign up">
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
