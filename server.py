@@ -146,6 +146,19 @@ def contact():
     # render an html and pass admins and login_button as data
     return render_template("contact.html", admin=admin, login_button=login_button)
 
+# create home route for GET request
+@app.route('/donate')
+def donate():
+
+    # # get login or logout depending if an admin is logged in or not
+    login_button = helper.switch_profile_login(session)
+
+    # query all admin to display on homepage
+    admin = crud.get_all_admins()
+
+    # render an html and pass admins and login_button as data
+    return render_template("donate.html", admin=admin, login_button=login_button)
+
 
 
 
