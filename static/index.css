@@ -229,3 +229,108 @@
 .eventCard .eveCard:hover .image2 {
     opacity: 1;
 }
+
+
+
+
+/* STORY CARD */
+
+.storyCard {
+    display: flex;
+    width: 30rem;
+    margin: 10px;
+    /* Add margin to create space between cards */
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.storyCard.storyCard-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* Center the image vertically within the card */
+}
+
+.storyCard .storyCard-img-container {
+    flex: 1;
+    /* Allow the image to grow and take up available space */
+    text-align: center;
+}
+
+.storyCard img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.storyCard .storyCard-body {
+    flex: 2;
+    /* Allow the text content to grow and take up more space than the image */
+    padding: 1rem;
+}
+
+.storyCard-title {
+    font-size: 1.25rem;
+}
+
+.storyCard-text {
+    font-size: 1rem;
+}
+
+/* Center the card container and wrap cards into two rows */
+.newsCard-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Style each newsCard */
+.newsCard {
+    width: calc(50% - 20px);
+    /* 50% width with gap in between */
+    margin: 10px;
+    /* Add margin to create space between cards */
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    /* Stack image and content vertically */
+    align-items: center;
+    /* Center content horizontally */
+    text-align: center;
+}
+
+.newsCard .newsCard-content {
+    flex: 1;
+    /* Allow content to grow and take up available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.newsCard .newsCard-img-container {
+    flex: 1;
+    /* Allow the image to grow and take up available space */
+}
+
+.newsCard img {
+    max-height: 200px;
+    /* Set a fixed maximum height for all images */
+    width: auto;
+    /* Allow the width to adjust while maintaining aspect ratio */
+    object-fit: cover;
+}
+
+.newsCard .newsCard-body {
+    flex: 1;
+    /* Allow the text content to grow and take up more space than the image */
+    padding: 1rem;
+}
+
+.newsCard-title {
+    font-size: 1.25rem;
+}
+
+.newsCard-text {
+    font-size: 1rem;
+}
